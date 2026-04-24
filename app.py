@@ -92,14 +92,38 @@ st.markdown(
     .stTabs [data-baseweb="tab-highlight"] { display: none; }
     .stTabs [data-baseweb="tab-border"] { display: none; }
     .stButton > button {
-        background-color: #d63d00;
-        color: #ffffff;
-        border-radius: 999px;
-        border: none;
-        padding: 10px 24px;
-        font-weight: 500;
+        background-color: #d63d00 !important;
+        color: #ffffff !important;
+        border-radius: 999px !important;
+        border: none !important;
+        padding: 10px 24px !important;
+        font-weight: 500 !important;
     }
-    .stButton > button:hover { background-color: #b83300; color: #ffffff; }
+    .stButton > button p,
+    .stButton > button span,
+    .stButton > button div { color: #ffffff !important; }
+    .stButton > button:hover {
+        background-color: #b83300 !important;
+        color: #ffffff !important;
+        border: none !important;
+    }
+    .stButton > button:hover p,
+    .stButton > button:hover span,
+    .stButton > button:hover div { color: #ffffff !important; }
+    .stButton > button:focus,
+    .stButton > button:active {
+        background-color: #b83300 !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+        outline: 2px solid #172f29 !important;
+        outline-offset: 2px !important;
+    }
+    .stButton > button:focus p,
+    .stButton > button:focus span,
+    .stButton > button:focus div,
+    .stButton > button:active p,
+    .stButton > button:active span,
+    .stButton > button:active div { color: #ffffff !important; }
     .feenx-pill {
         display: inline-block;
         padding: 6px 14px;
