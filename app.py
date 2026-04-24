@@ -47,24 +47,50 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stApp { background-color: #f9f6ec; }
-    section[data-testid="stSidebar"] { background-color: #ffffff; border-right: 1px solid #e1e1e1; }
+    .stApp { background-color: #f9f6ec; color: #1a1a1a; }
+    header[data-testid="stHeader"] { background-color: #f9f6ec; }
+    section[data-testid="stSidebar"] {
+        background-color: #ffffff;
+        border-right: 1px solid #e1e1e1;
+    }
+    section[data-testid="stSidebar"] *,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] div { color: #1a1a1a; }
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] h4 { color: #172f29; }
+    section[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+    section[data-testid="stSidebar"] small { color: #3a3a3a; }
     h1, h2, h3, h4 {
         font-family: Georgia, "Playfair Display", serif;
         color: #172f29;
     }
     p, span, label, li { color: #1a1a1a; }
-    .stTabs [data-baseweb="tab-list"] { gap: 8px; }
+    [data-testid="stMarkdownContainer"] p,
+    [data-testid="stMarkdownContainer"] li { color: #1a1a1a; }
+    .stTabs { margin-top: 28px; }
+    .stTabs [data-baseweb="tab-list"] { gap: 10px; padding-bottom: 4px; }
     .stTabs [data-baseweb="tab"] {
         background-color: #ffffff;
         border-radius: 999px;
-        padding: 8px 16px;
+        padding: 10px 20px;
         border: 1px solid #e1e1e1;
+        color: #172f29;
     }
-    .stTabs [aria-selected="true"] {
+    .stTabs [data-baseweb="tab"] p,
+    .stTabs [data-baseweb="tab"] span { color: #172f29 !important; }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] {
         background-color: #172f29;
-        color: #f9f6ec !important;
+        border-color: #172f29;
     }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] p,
+    .stTabs [data-baseweb="tab"][aria-selected="true"] span,
+    .stTabs [data-baseweb="tab"][aria-selected="true"] div { color: #f9f6ec !important; }
+    .stTabs [data-baseweb="tab-highlight"] { display: none; }
+    .stTabs [data-baseweb="tab-border"] { display: none; }
     .stButton > button {
         background-color: #d63d00;
         color: #ffffff;
