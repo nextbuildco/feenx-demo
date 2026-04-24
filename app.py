@@ -268,7 +268,10 @@ with tab_profile:
         )
 
     st.markdown("### Training week")
-    training_df = pd.DataFrame(client["trainingWeek"])
+    training_df = pd.DataFrame([
+        {"Day": d["day"], "Intensity": d["intensity"]}
+        for d in client["trainingWeek"]
+    ])
     st.dataframe(training_df, hide_index=True, use_container_width=True)
 
     st.markdown("### This week's plan")
