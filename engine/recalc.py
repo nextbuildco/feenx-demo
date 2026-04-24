@@ -1,5 +1,5 @@
 """
-FeenX adaptive recalculator (engine B).
+FeenX adaptive recalculator.
 
 Deterministic, LLM-free math. Given a plan, a log event, and a redistribution
 strategy, this module computes the new per-day targets for the rest of the week.
@@ -99,7 +99,7 @@ def recalc_rest_of_week(
     strategy: Strategy = "even",
 ) -> RecalcResult:
     """
-    Core engine B function.
+    Core recalc function.
 
     `plan_days`     full 7-day plan (list of day dicts from plans.json)
     `today_index`   which day in the list is today (0..6)

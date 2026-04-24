@@ -1,10 +1,10 @@
 """
-FeenX AI engine demo -- Streamlit app.
+FeenX AI demo -- Streamlit app.
 
 Three tabs:
-  1. Client Profile          -- inspect seeded client + their 7-day plan
-  2. Smart Swap              -- engine B: deterministic recalc + LLM rationale
-  3. Generate Meal           -- engine A teaser: curated library + LLM rationale
+  1. Client Profile     -- inspect seeded client + their 7-day plan
+  2. Smart Swap         -- deterministic recalc + LLM rationale
+  3. Generate Meal      -- curated library + scoring + LLM rationale
 
 Run locally:
     ANTHROPIC_API_KEY=sk-... streamlit run app.py
@@ -37,7 +37,7 @@ from engine.recalc import compute_day_total, recalc_rest_of_week
 # ---------- Page config + theme ----------
 
 st.set_page_config(
-    page_title="FeenX -- Adaptive Nutrition Engine",
+    page_title="FeenX -- Adaptive Nutrition Demo",
     page_icon="●",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -191,9 +191,9 @@ with st.sidebar:
 
     st.divider()
     st.caption(
-        "This demo shows the two AI engines behind FeenX: a deterministic "
-        "recalculator that handles real-life swaps, and a hybrid meal "
-        "generator that picks meals from a curated library and explains why."
+        "This demo shows how FeenX adapts a nutrition plan to real life. "
+        "Swap a meal and watch the week rebalance. Generate a new meal and "
+        "see why it was picked for this client."
     )
     api_ok = bool(os.getenv("ANTHROPIC_API_KEY"))
     if api_ok:
@@ -220,8 +220,8 @@ st.markdown(
 
 tab_profile, tab_swap, tab_generate = st.tabs([
     "Client profile",
-    "Smart swap (engine B)",
-    "Generate a meal (engine A)",
+    "Smart swap",
+    "Generate a meal",
 ])
 
 
@@ -298,7 +298,7 @@ with tab_profile:
 
 
 # =================================================================
-# Tab 2: Smart Swap (engine B)
+# Tab 2: Smart Swap
 # =================================================================
 
 with tab_swap:
@@ -480,15 +480,15 @@ with tab_swap:
 
 
 # =================================================================
-# Tab 3: Generate Meal (engine A teaser)
+# Tab 3: Generate Meal
 # =================================================================
 
 with tab_generate:
     st.markdown("### Generate a meal for this client")
     st.markdown(
-        "Engine A filters a curated recipe library by the client's hard constraints "
-        "(allergies, aversions, cooking time, equipment), then scores by goal + "
-        "training intensity + chronic condition. The LLM writes the \"why we "
+        "FeenX filters a curated recipe library by the client's hard constraints "
+        "(allergies, aversions, cooking time, equipment), then scores by goal, "
+        "training intensity, and chronic condition. The LLM writes the \"why we "
         "picked this\" chips shown on the mobile meal-detail screen."
     )
 

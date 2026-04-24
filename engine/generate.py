@@ -1,5 +1,5 @@
 """
-FeenX meal-plan generator teaser (engine A).
+FeenX meal-plan generator.
 
 Hybrid: retrieval over curated recipes + LLM for rationale.
 

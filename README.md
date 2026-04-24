@@ -1,9 +1,9 @@
-# FeenX — Adaptive Nutrition Engine Demo
+# FeenX — Adaptive Nutrition Demo
 
-Interactive Streamlit demo of the two AI engines that power FeenX:
+Interactive Streamlit demo of the AI behind FeenX:
 
-- **Engine B — Smart Swap recalculator:** deterministic math that redistributes macros across the rest of the week when a client eats off-plan. LLM writes the rationale copy on top.
-- **Engine A — Meal generator (teaser):** filters a curated recipe library by the client's hard constraints (allergies, aversions, cooking time, equipment), scores by goal + training intensity + chronic condition, then uses the LLM to write the "why we picked this" chips.
+- **Smart Swap:** deterministic math redistributes macros across the rest of the week when a client eats off-plan. LLM writes the rationale copy on top.
+- **Generate a meal:** filters a curated recipe library by the client's hard constraints (allergies, aversions, cooking time, equipment), scores by goal + training intensity + chronic condition, then uses the LLM to write the "why we picked this" chips.
 
 Three seeded clients to demo variety: Sam K. (fat loss), Diego L. (Type 2 Diabetes), Alyssa P. (PCOS).
 
@@ -24,7 +24,7 @@ Browser opens at http://localhost:8501.
 ## Deploy to Streamlit Community Cloud
 
 1. Push this repo to GitHub.
-2. Go to https://share.streamlit.io → New app → point at this repo, branch, `feenx-demo/app.py`.
+2. Go to https://share.streamlit.io → New app → point at this repo, branch, `app.py`.
 3. In **Settings → Secrets**, paste:
    ```
    ANTHROPIC_API_KEY = "sk-ant-..."
@@ -36,7 +36,7 @@ Browser opens at http://localhost:8501.
 **Tab 1 — Client profile**
 Inspect the seeded client: goal, body metrics, training week, allergies, aversions, equipment, and the full 7-day plan.
 
-**Tab 2 — Smart swap (engine B)**
+**Tab 2 — Smart swap**
 1. Pick which meal got swapped (default: lunch).
 2. Pick what they actually ate (Chipotle bowl, pizza slice, Cava bowl, etc.) or edit macros manually.
 3. Pick redistribution strategy: **Even split** or **Smart by training day**.
@@ -46,17 +46,17 @@ The app computes the delta, redistributes it across remaining days respecting sa
 
 The structured output at the bottom of the tab is exactly the shape the mobile app would receive from a real backend call.
 
-**Tab 3 — Generate a meal (engine A)**
-Pick a slot and training intensity. The engine filters the curated library by hard constraints, scores every candidate by goal + condition + training context, picks the top, and the LLM writes the 3 insight chips. Expand the breakdown to see the full candidate scoring.
+**Tab 3 — Generate a meal**
+Pick a slot and training intensity. FeenX filters the curated library by hard constraints, scores every candidate by goal + condition + training context, picks the top, and the LLM writes the 3 insight chips. Expand the breakdown to see the full candidate scoring.
 
 ## Architecture
 
 ```
 app.py                         Streamlit UI
 engine/
-  recalc.py                    Deterministic math (engine B core)
+  recalc.py                    Deterministic recalc math
   rationale.py                 LLM wrapper for smart-swap copy
-  generate.py                  Filter + score + LLM wrapper for engine A
+  generate.py                  Filter + score + LLM wrapper for meal generation
 data/
   clients.json                 3 seeded client profiles
   plans.json                   7-day plans per client
@@ -64,7 +64,7 @@ data/
   recipes.json                 30 curated meals with tags + constraints
 ```
 
-**Boundary between math and LLM:** the LLM never touches the numbers. It only writes the explanation copy on top of a structured result from `recalc.py`. This is deliberate — the math must be provable and auditable.
+**Boundary between math and LLM:** the LLM never touches the numbers. It only writes the explanation copy on top of a structured result from `recalc.py`. The math must be provable and auditable.
 
 **Path to production:** `recalc.py` becomes a backend action. `generate.py` becomes an agent with tool access to a full recipe corpus via vector search. `rationale.py` becomes a second agent writing voice-consistent copy. The mobile app calls the backend, receives the same structured result shape, and renders identically.
 
