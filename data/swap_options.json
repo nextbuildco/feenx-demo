@@ -1,0 +1,75 @@
+[
+  {
+    "id": "chipotle-bowl",
+    "label": "Chipotle chicken bowl",
+    "kcal": 815,
+    "proteinG": 55,
+    "carbsG": 79,
+    "fatG": 30,
+    "customizations": ["brown rice", "black beans", "fajita veggies", "mild salsa", "cheese"]
+  },
+  {
+    "id": "sandwich-shop",
+    "label": "Sandwich shop (turkey, 12\" sub)",
+    "kcal": 680,
+    "proteinG": 38,
+    "carbsG": 62,
+    "fatG": 26
+  },
+  {
+    "id": "pizza-slice",
+    "label": "Pizza slice (cheese, NY-style)",
+    "kcal": 320,
+    "proteinG": 14,
+    "carbsG": 38,
+    "fatG": 12
+  },
+  {
+    "id": "coffee-shop",
+    "label": "Coffee shop (latte + pastry)",
+    "kcal": 450,
+    "proteinG": 18,
+    "carbsG": 52,
+    "fatG": 18
+  },
+  {
+    "id": "protein-bar",
+    "label": "Protein bar",
+    "kcal": 220,
+    "proteinG": 20,
+    "carbsG": 22,
+    "fatG": 7
+  },
+  {
+    "id": "cava-bowl",
+    "label": "Cava bowl (greens, chicken, hummus)",
+    "kcal": 620,
+    "proteinG": 48,
+    "carbsG": 42,
+    "fatG": 26
+  },
+  {
+    "id": "sweetgreen",
+    "label": "Sweetgreen harvest bowl",
+    "kcal": 705,
+    "proteinG": 30,
+    "carbsG": 82,
+    "fatG": 28
+  },
+  {
+    "id": "birthday-cake",
+    "label": "Birthday cake slice (coworker's birthday)",
+    "kcal": 380,
+    "proteinG": 4,
+    "carbsG": 52,
+    "fatG": 18
+  },
+  {
+    "id": "fast-food-burger",
+    "label": "Fast-food cheeseburger + small fries",
+    "kcal": 780,
+    "proteinG": 32,
+    "carbsG": 74,
+    "fatG": 38
+  }
+]

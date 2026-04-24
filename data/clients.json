@@ -1,0 +1,103 @@
+{
+  "sam-k": {
+    "id": "sam-k",
+    "firstName": "Sam",
+    "lastName": "K.",
+    "age": 34,
+    "sexAtBirth": "Female",
+    "heightCm": 168,
+    "currentWeightKg": 72.5,
+    "targetWeightKg": 66,
+    "goal": "Fat loss",
+    "chronicConditions": [],
+    "allergies": ["Shellfish"],
+    "aversions": ["Cilantro", "Blue cheese"],
+    "cookingMinutesWeeknight": 30,
+    "equipment": ["Oven", "Stovetop", "Air fryer", "Blender"],
+    "sports": ["Lifting", "Running", "Yoga"],
+    "trainingWeek": [
+      {"day": "Mon", "intensity": "Moderate"},
+      {"day": "Tue", "intensity": "High"},
+      {"day": "Wed", "intensity": "Rest"},
+      {"day": "Thu", "intensity": "Moderate"},
+      {"day": "Fri", "intensity": "High"},
+      {"day": "Sat", "intensity": "Low"},
+      {"day": "Sun", "intensity": "Rest"}
+    ],
+    "targets": {
+      "kcal": 2100,
+      "proteinG": 160,
+      "carbsG": 210,
+      "fatG": 70,
+      "hydrationGlasses": 8
+    }
+  },
+  "diego-l": {
+    "id": "diego-l",
+    "firstName": "Diego",
+    "lastName": "L.",
+    "age": 47,
+    "sexAtBirth": "Male",
+    "heightCm": 178,
+    "currentWeightKg": 89,
+    "targetWeightKg": 85,
+    "goal": "Maintenance",
+    "chronicConditions": ["Type 2 Diabetes"],
+    "allergies": [],
+    "aversions": ["Liver", "Olives"],
+    "cookingMinutesWeeknight": 45,
+    "equipment": ["Oven", "Stovetop", "Slow cooker", "Grill"],
+    "sports": ["Lifting", "Hiking"],
+    "trainingWeek": [
+      {"day": "Mon", "intensity": "Moderate"},
+      {"day": "Tue", "intensity": "Rest"},
+      {"day": "Wed", "intensity": "Moderate"},
+      {"day": "Thu", "intensity": "Rest"},
+      {"day": "Fri", "intensity": "Moderate"},
+      {"day": "Sat", "intensity": "Low"},
+      {"day": "Sun", "intensity": "Rest"}
+    ],
+    "targets": {
+      "kcal": 2400,
+      "proteinG": 170,
+      "carbsG": 220,
+      "fatG": 85,
+      "hydrationGlasses": 10
+    },
+    "notes": "T2 Diabetes under control. Favors low-glycemic meals, paired carbs with protein + fat to manage blood sugar."
+  },
+  "alyssa-p": {
+    "id": "alyssa-p",
+    "firstName": "Alyssa",
+    "lastName": "P.",
+    "age": 29,
+    "sexAtBirth": "Female",
+    "heightCm": 164,
+    "currentWeightKg": 68,
+    "targetWeightKg": 62,
+    "goal": "Fat loss",
+    "chronicConditions": ["PCOS"],
+    "allergies": ["Tree nuts"],
+    "aversions": ["Mushrooms", "Beets"],
+    "cookingMinutesWeeknight": 25,
+    "equipment": ["Stovetop", "Air fryer", "Instant Pot"],
+    "sports": ["Running", "Yoga"],
+    "trainingWeek": [
+      {"day": "Mon", "intensity": "Moderate"},
+      {"day": "Tue", "intensity": "Low"},
+      {"day": "Wed", "intensity": "Moderate"},
+      {"day": "Thu", "intensity": "Rest"},
+      {"day": "Fri", "intensity": "High"},
+      {"day": "Sat", "intensity": "Low"},
+      {"day": "Sun", "intensity": "Rest"}
+    ],
+    "targets": {
+      "kcal": 1850,
+      "proteinG": 150,
+      "carbsG": 155,
+      "fatG": 70,
+      "hydrationGlasses": 8
+    },
+    "notes": "PCOS. Lower-carb on rest days supports insulin sensitivity. Favors protein + healthy fat first in the day."
+  }
+}

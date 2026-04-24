@@ -1,0 +1,116 @@
+{
+  "sam-k": {
+    "days": [
+      {
+        "dayOfWeek": "Mon",
+        "intensity": "Moderate",
+        "meals": [
+          {"slot": "Breakfast", "name": "Savory oats w/ eggs & spinach",       "kcal": 415, "proteinG": 28, "carbsG": 42, "fatG": 14, "prepMinutes": 15, "status": "Logged"},
+          {"slot": "Lunch",     "name": "Grilled chicken grain bowl",          "kcal": 540, "proteinG": 42, "carbsG": 55, "fatG": 16, "prepMinutes": 25, "status": "Pending"},
+          {"slot": "Snack",     "name": "Greek yogurt w/ berries & almonds",   "kcal": 210, "proteinG": 18, "carbsG": 22, "fatG": 6,  "prepMinutes": 3,  "status": "Pending"},
+          {"slot": "Dinner",    "name": "Salmon, sweet potato, broccoli",      "kcal": 620, "proteinG": 44, "carbsG": 48, "fatG": 24, "prepMinutes": 30, "status": "Pending", "trainerPick": true}
+        ]
+      },
+      {
+        "dayOfWeek": "Tue",
+        "intensity": "High",
+        "meals": [
+          {"slot": "Breakfast", "name": "Greek yogurt parfait w/ granola",     "kcal": 400, "proteinG": 26, "carbsG": 48, "fatG": 12, "prepMinutes": 8},
+          {"slot": "Lunch",     "name": "Turkey & hummus wrap",                "kcal": 520, "proteinG": 38, "carbsG": 52, "fatG": 18, "prepMinutes": 10},
+          {"slot": "Snack",     "name": "Apple w/ almond butter",              "kcal": 190, "proteinG": 5,  "carbsG": 24, "fatG": 9,  "prepMinutes": 2},
+          {"slot": "Dinner",    "name": "Lean beef stir-fry, jasmine rice",    "kcal": 630, "proteinG": 45, "carbsG": 62, "fatG": 18, "prepMinutes": 25}
+        ]
+      },
+      {
+        "dayOfWeek": "Wed",
+        "intensity": "Rest",
+        "meals": [
+          {"slot": "Breakfast", "name": "Savory oats w/ eggs & spinach",       "kcal": 415, "proteinG": 28, "carbsG": 42, "fatG": 14, "prepMinutes": 15},
+          {"slot": "Lunch",     "name": "Tuna & white bean salad",             "kcal": 480, "proteinG": 40, "carbsG": 42, "fatG": 16, "prepMinutes": 10},
+          {"slot": "Snack",     "name": "Cottage cheese w/ pineapple",         "kcal": 200, "proteinG": 22, "carbsG": 18, "fatG": 4,  "prepMinutes": 2},
+          {"slot": "Dinner",    "name": "Chicken thigh, quinoa, zucchini",     "kcal": 610, "proteinG": 42, "carbsG": 55, "fatG": 22, "prepMinutes": 30}
+        ]
+      },
+      {
+        "dayOfWeek": "Thu",
+        "intensity": "Moderate",
+        "meals": [
+          {"slot": "Breakfast", "name": "Protein smoothie (whey, banana, oats)", "kcal": 410, "proteinG": 32, "carbsG": 50, "fatG": 8,  "prepMinutes": 5},
+          {"slot": "Lunch",     "name": "Grilled chicken grain bowl",          "kcal": 540, "proteinG": 42, "carbsG": 55, "fatG": 16, "prepMinutes": 25},
+          {"slot": "Snack",     "name": "Edamame w/ sea salt",                 "kcal": 180, "proteinG": 18, "carbsG": 14, "fatG": 6,  "prepMinutes": 3},
+          {"slot": "Dinner",    "name": "Shrimp pad thai, brown rice noodles", "kcal": 600, "proteinG": 38, "carbsG": 66, "fatG": 18, "prepMinutes": 25}
+        ]
+      },
+      {
+        "dayOfWeek": "Fri",
+        "intensity": "High",
+        "meals": [
+          {"slot": "Breakfast", "name": "Veggie omelet w/ sourdough",          "kcal": 420, "proteinG": 30, "carbsG": 36, "fatG": 16, "prepMinutes": 12},
+          {"slot": "Lunch",     "name": "Chicken caesar w/ chickpeas",         "kcal": 550, "proteinG": 44, "carbsG": 48, "fatG": 18, "prepMinutes": 15},
+          {"slot": "Snack",     "name": "Greek yogurt w/ berries & almonds",   "kcal": 210, "proteinG": 18, "carbsG": 22, "fatG": 6,  "prepMinutes": 3},
+          {"slot": "Dinner",    "name": "Salmon, roasted sweet potato, broccoli", "kcal": 620, "proteinG": 44, "carbsG": 48, "fatG": 24, "prepMinutes": 30, "trainerPick": true}
+        ]
+      },
+      {
+        "dayOfWeek": "Sat",
+        "intensity": "Low",
+        "meals": [
+          {"slot": "Breakfast", "name": "Overnight oats, chia, walnuts",       "kcal": 430, "proteinG": 24, "carbsG": 50, "fatG": 14, "prepMinutes": 5},
+          {"slot": "Lunch",     "name": "Baked chicken, roasted vegetables",   "kcal": 530, "proteinG": 42, "carbsG": 44, "fatG": 16, "prepMinutes": 20},
+          {"slot": "Snack",     "name": "Beef jerky + orange",                 "kcal": 220, "proteinG": 20, "carbsG": 20, "fatG": 4,  "prepMinutes": 0},
+          {"slot": "Dinner",    "name": "Pork tenderloin, farro, greens",      "kcal": 610, "proteinG": 42, "carbsG": 52, "fatG": 20, "prepMinutes": 30}
+        ]
+      },
+      {
+        "dayOfWeek": "Sun",
+        "intensity": "Rest",
+        "meals": [
+          {"slot": "Breakfast", "name": "Scrambled eggs, avocado toast",       "kcal": 440, "proteinG": 24, "carbsG": 38, "fatG": 20, "prepMinutes": 10},
+          {"slot": "Lunch",     "name": "Lentil soup + multigrain roll",       "kcal": 500, "proteinG": 30, "carbsG": 62, "fatG": 12, "prepMinutes": 15},
+          {"slot": "Snack",     "name": "Hard-boiled eggs + cucumber",         "kcal": 180, "proteinG": 18, "carbsG": 6,  "fatG": 10, "prepMinutes": 2},
+          {"slot": "Dinner",    "name": "Roast chicken, mashed cauliflower, kale", "kcal": 600, "proteinG": 48, "carbsG": 38, "fatG": 22, "prepMinutes": 45}
+        ]
+      }
+    ]
+  },
+  "diego-l": {
+    "days": [
+      {
+        "dayOfWeek": "Mon",
+        "intensity": "Moderate",
+        "meals": [
+          {"slot": "Breakfast", "name": "Steel-cut oats w/ walnuts & berries", "kcal": 480, "proteinG": 22, "carbsG": 58, "fatG": 18, "prepMinutes": 20, "status": "Logged"},
+          {"slot": "Lunch",     "name": "Grilled chicken, lentils, greens",    "kcal": 620, "proteinG": 48, "carbsG": 48, "fatG": 22, "prepMinutes": 25, "status": "Pending"},
+          {"slot": "Snack",     "name": "Cottage cheese + flax crackers",      "kcal": 250, "proteinG": 22, "carbsG": 20, "fatG": 10, "prepMinutes": 2,  "status": "Pending"},
+          {"slot": "Dinner",    "name": "Slow-cooker chili w/ avocado",        "kcal": 700, "proteinG": 52, "carbsG": 54, "fatG": 28, "prepMinutes": 10, "status": "Pending", "trainerPick": true}
+        ]
+      },
+      {"dayOfWeek": "Tue", "intensity": "Rest",     "meals": [{"slot": "Breakfast", "name": "Greek yogurt w/ chia & raspberries", "kcal": 430, "proteinG": 32, "carbsG": 36, "fatG": 14, "prepMinutes": 5}, {"slot": "Lunch", "name": "Mediterranean tuna bowl", "kcal": 580, "proteinG": 46, "carbsG": 42, "fatG": 24, "prepMinutes": 10}, {"slot": "Snack", "name": "Hummus + carrots", "kcal": 220, "proteinG": 8, "carbsG": 24, "fatG": 10, "prepMinutes": 2}, {"slot": "Dinner", "name": "Salmon, cauliflower rice, broccoli", "kcal": 650, "proteinG": 48, "carbsG": 30, "fatG": 34, "prepMinutes": 25}]},
+      {"dayOfWeek": "Wed", "intensity": "Moderate", "meals": [{"slot": "Breakfast", "name": "Veggie omelet w/ black beans", "kcal": 480, "proteinG": 34, "carbsG": 32, "fatG": 22, "prepMinutes": 15}, {"slot": "Lunch", "name": "Turkey + quinoa bowl", "kcal": 600, "proteinG": 46, "carbsG": 52, "fatG": 20, "prepMinutes": 15}, {"slot": "Snack", "name": "Mixed nuts", "kcal": 240, "proteinG": 8, "carbsG": 10, "fatG": 20, "prepMinutes": 0}, {"slot": "Dinner", "name": "Pork tenderloin, sweet potato, greens", "kcal": 700, "proteinG": 52, "carbsG": 48, "fatG": 28, "prepMinutes": 35}]},
+      {"dayOfWeek": "Thu", "intensity": "Rest",     "meals": [{"slot": "Breakfast", "name": "Scrambled tofu w/ avocado toast", "kcal": 460, "proteinG": 26, "carbsG": 36, "fatG": 22, "prepMinutes": 12}, {"slot": "Lunch", "name": "Grilled steak salad", "kcal": 620, "proteinG": 48, "carbsG": 26, "fatG": 34, "prepMinutes": 20}, {"slot": "Snack", "name": "Greek yogurt + berries", "kcal": 210, "proteinG": 20, "carbsG": 22, "fatG": 4, "prepMinutes": 2}, {"slot": "Dinner", "name": "Shrimp stir-fry, cauliflower rice", "kcal": 630, "proteinG": 46, "carbsG": 32, "fatG": 28, "prepMinutes": 20}]},
+      {"dayOfWeek": "Fri", "intensity": "Moderate", "meals": [{"slot": "Breakfast", "name": "Steel-cut oats w/ walnuts & berries", "kcal": 480, "proteinG": 22, "carbsG": 58, "fatG": 18, "prepMinutes": 20}, {"slot": "Lunch", "name": "Chicken, wild rice, kale", "kcal": 610, "proteinG": 48, "carbsG": 48, "fatG": 20, "prepMinutes": 25}, {"slot": "Snack", "name": "Hard-boiled eggs", "kcal": 220, "proteinG": 20, "carbsG": 2, "fatG": 14, "prepMinutes": 1}, {"slot": "Dinner", "name": "Grilled salmon, farro, asparagus", "kcal": 720, "proteinG": 52, "carbsG": 52, "fatG": 30, "prepMinutes": 30}]},
+      {"dayOfWeek": "Sat", "intensity": "Low",      "meals": [{"slot": "Breakfast", "name": "Cottage cheese pancakes", "kcal": 440, "proteinG": 36, "carbsG": 44, "fatG": 12, "prepMinutes": 15}, {"slot": "Lunch", "name": "Turkey chili, avocado", "kcal": 600, "proteinG": 48, "carbsG": 40, "fatG": 24, "prepMinutes": 10}, {"slot": "Snack", "name": "Beef jerky + almonds", "kcal": 260, "proteinG": 22, "carbsG": 12, "fatG": 14, "prepMinutes": 0}, {"slot": "Dinner", "name": "Roast chicken, sweet potato, broccoli", "kcal": 680, "proteinG": 52, "carbsG": 46, "fatG": 28, "prepMinutes": 45}]},
+      {"dayOfWeek": "Sun", "intensity": "Rest",     "meals": [{"slot": "Breakfast", "name": "Veggie frittata", "kcal": 460, "proteinG": 32, "carbsG": 24, "fatG": 26, "prepMinutes": 20}, {"slot": "Lunch", "name": "Lentil stew + side salad", "kcal": 580, "proteinG": 34, "carbsG": 64, "fatG": 18, "prepMinutes": 30}, {"slot": "Snack", "name": "Greek yogurt + cinnamon", "kcal": 220, "proteinG": 20, "carbsG": 22, "fatG": 6, "prepMinutes": 2}, {"slot": "Dinner", "name": "Grilled pork, quinoa, greens", "kcal": 680, "proteinG": 52, "carbsG": 44, "fatG": 28, "prepMinutes": 30}]}
+    ]
+  },
+  "alyssa-p": {
+    "days": [
+      {
+        "dayOfWeek": "Mon",
+        "intensity": "Moderate",
+        "meals": [
+          {"slot": "Breakfast", "name": "Veggie scramble w/ avocado",          "kcal": 380, "proteinG": 28, "carbsG": 18, "fatG": 22, "prepMinutes": 10, "status": "Logged"},
+          {"slot": "Lunch",     "name": "Grilled chicken, quinoa, greens",    "kcal": 490, "proteinG": 44, "carbsG": 42, "fatG": 16, "prepMinutes": 20, "status": "Pending"},
+          {"slot": "Snack",     "name": "Sunflower butter + apple",            "kcal": 200, "proteinG": 6,  "carbsG": 24, "fatG": 10, "prepMinutes": 2,  "status": "Pending"},
+          {"slot": "Dinner",    "name": "Turkey meatballs, zoodles, marinara", "kcal": 540, "proteinG": 44, "carbsG": 36, "fatG": 22, "prepMinutes": 25, "status": "Pending", "trainerPick": true}
+        ]
+      },
+      {"dayOfWeek": "Tue", "intensity": "Low",      "meals": [{"slot": "Breakfast", "name": "Greek yogurt + chia + berries", "kcal": 340, "proteinG": 26, "carbsG": 28, "fatG": 12, "prepMinutes": 3}, {"slot": "Lunch", "name": "Chicken Caesar (no croutons)", "kcal": 480, "proteinG": 42, "carbsG": 18, "fatG": 26, "prepMinutes": 15}, {"slot": "Snack", "name": "Hard-boiled eggs + cucumber", "kcal": 180, "proteinG": 18, "carbsG": 6, "fatG": 10, "prepMinutes": 2}, {"slot": "Dinner", "name": "Shrimp, cauliflower rice, asparagus", "kcal": 460, "proteinG": 42, "carbsG": 24, "fatG": 20, "prepMinutes": 20}]},
+      {"dayOfWeek": "Wed", "intensity": "Moderate", "meals": [{"slot": "Breakfast", "name": "Cottage cheese + stone fruit", "kcal": 360, "proteinG": 30, "carbsG": 30, "fatG": 10, "prepMinutes": 2}, {"slot": "Lunch", "name": "Turkey + hummus wrap (low-carb)", "kcal": 500, "proteinG": 40, "carbsG": 32, "fatG": 22, "prepMinutes": 10}, {"slot": "Snack", "name": "Hummus + carrots", "kcal": 210, "proteinG": 8, "carbsG": 24, "fatG": 10, "prepMinutes": 2}, {"slot": "Dinner", "name": "Baked chicken thigh, roasted veg", "kcal": 560, "proteinG": 44, "carbsG": 28, "fatG": 28, "prepMinutes": 25}]},
+      {"dayOfWeek": "Thu", "intensity": "Rest",     "meals": [{"slot": "Breakfast", "name": "Veggie scramble w/ avocado", "kcal": 380, "proteinG": 28, "carbsG": 18, "fatG": 22, "prepMinutes": 10}, {"slot": "Lunch", "name": "Lentil + arugula salad, feta", "kcal": 500, "proteinG": 30, "carbsG": 46, "fatG": 22, "prepMinutes": 10}, {"slot": "Snack", "name": "Sunflower butter + apple", "kcal": 200, "proteinG": 6, "carbsG": 24, "fatG": 10, "prepMinutes": 2}, {"slot": "Dinner", "name": "Grilled salmon, zucchini noodles", "kcal": 480, "proteinG": 42, "carbsG": 18, "fatG": 26, "prepMinutes": 20}]},
+      {"dayOfWeek": "Fri", "intensity": "High",     "meals": [{"slot": "Breakfast", "name": "Overnight oats w/ sunflower seeds", "kcal": 420, "proteinG": 24, "carbsG": 52, "fatG": 14, "prepMinutes": 5}, {"slot": "Lunch", "name": "Chicken burrito bowl (brown rice)", "kcal": 560, "proteinG": 44, "carbsG": 56, "fatG": 18, "prepMinutes": 15}, {"slot": "Snack", "name": "Greek yogurt + honey", "kcal": 220, "proteinG": 20, "carbsG": 24, "fatG": 6, "prepMinutes": 2}, {"slot": "Dinner", "name": "Turkey meatballs, zoodles, marinara", "kcal": 540, "proteinG": 44, "carbsG": 36, "fatG": 22, "prepMinutes": 25}]},
+      {"dayOfWeek": "Sat", "intensity": "Low",      "meals": [{"slot": "Breakfast", "name": "Veggie omelet (no cheese)", "kcal": 340, "proteinG": 28, "carbsG": 14, "fatG": 20, "prepMinutes": 10}, {"slot": "Lunch", "name": "Salmon poke bowl (cauliflower rice)", "kcal": 500, "proteinG": 42, "carbsG": 26, "fatG": 24, "prepMinutes": 15}, {"slot": "Snack", "name": "Hard-boiled eggs + cucumber", "kcal": 180, "proteinG": 18, "carbsG": 6, "fatG": 10, "prepMinutes": 2}, {"slot": "Dinner", "name": "Chicken, roasted squash, kale", "kcal": 520, "proteinG": 42, "carbsG": 32, "fatG": 22, "prepMinutes": 25}]},
+      {"dayOfWeek": "Sun", "intensity": "Rest",     "meals": [{"slot": "Breakfast", "name": "Greek yogurt + chia + berries", "kcal": 340, "proteinG": 26, "carbsG": 28, "fatG": 12, "prepMinutes": 3}, {"slot": "Lunch", "name": "Chopped chicken + avocado salad", "kcal": 500, "proteinG": 42, "carbsG": 20, "fatG": 28, "prepMinutes": 10}, {"slot": "Snack", "name": "Cottage cheese + cucumber", "kcal": 200, "proteinG": 22, "carbsG": 10, "fatG": 6, "prepMinutes": 2}, {"slot": "Dinner", "name": "Baked cod, cauliflower mash, greens", "kcal": 480, "proteinG": 44, "carbsG": 22, "fatG": 22, "prepMinutes": 25}]}
+    ]
+  }
+}
