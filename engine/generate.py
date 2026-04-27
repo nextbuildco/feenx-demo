@@ -120,6 +120,29 @@ def score_recipe_for_client(recipe: dict, client: dict, intensity: str) -> float
     if any("hypertension" in c for c in conditions):
         if "heart-healthy" in tags:
             score += 0.3
+    # GLP-1 medication users (Ozempic, Wegovy, Mounjaro):
+    # Reduced appetite -> low-volume, nausea-friendly meals win.
+    # Avoid high-fat, fried, spicy. Protein floor is critical.
+    if any("glp-1" in c or "glp1" in c or "wegovy" in c or "ozempic" in c or "mounjaro" in c for c in conditions):
+        if "glp1-friendly" in tags or "low-volume" in tags:
+            score += 0.4
+        if "nausea-friendly" in tags or "low-fat" in tags:
+            score += 0.25
+        if recipe["proteinG"] >= 24:
+            score += 0.2
+        # Penalize high-fat or large-volume meals heavily.
+        if recipe["fatG"] > 22 or recipe["kcal"] > 500:
+            score -= 0.5
+
+    # Life-stage boosts (perimenopause).
+    life_stage = (client.get("lifeStage") or "").lower()
+    if "perimenopause" in life_stage or "menopause" in life_stage:
+        if "perimenopause-friendly" in tags:
+            score += 0.3
+        if "high-protein" in tags or "calcium-rich" in tags or "iron-rich" in tags:
+            score += 0.2
+        if recipe["proteinG"] >= 30:
+            score += 0.15
 
     # Training-day context.
     if intensity == "High" and "post-workout" in tags:
@@ -205,7 +228,15 @@ def _fallback_insights(client: dict, meal: dict, intensity: str) -> list[str]:
     out: list[str] = []
     goal = client.get("goal", "")
     conditions = [c.lower() for c in client.get("chronicConditions", [])]
-    if goal == "Fat loss":
+    life_stage = (client.get("lifeStage") or "").lower()
+    is_glp1 = any(
+        "glp-1" in c or "glp1" in c or "wegovy" in c or "ozempic" in c or "mounjaro" in c
+        for c in conditions
+    )
+
+    if is_glp1:
+        out.append(f"{meal['proteinG']}g protein in a small portion — protects lean mass while appetite is reduced.")
+    elif goal == "Fat loss":
         out.append(f"Keeps you full at {meal['kcal']} kcal -- on track for your fat-loss target.")
     elif goal == "Muscle gain":
         out.append(f"Packs {meal['proteinG']}g protein -- supports your muscle-gain window.")
@@ -213,9 +244,15 @@ def _fallback_insights(client: dict, meal: dict, intensity: str) -> list[str]:
         out.append(f"{meal['carbsG']}g carbs -- fuels your {intensity.lower()}-intensity training day.")
     else:
         out.append(f"Balanced macros at {meal['kcal']} kcal -- matches your maintenance target.")
+
     if meal["prepMinutes"] <= client.get("cookingMinutesWeeknight", 30):
         out.append(f"{meal['prepMinutes']} min prep -- fits your weeknight cooking budget.")
-    if any("diabetes" in c for c in conditions) and meal.get("glycemicLoad") == "low":
+
+    if is_glp1 and meal["fatG"] <= 14:
+        out.append("Lower fat — gentler on appetite and easier to keep down.")
+    elif "perimenopause" in life_stage and meal["proteinG"] >= 30:
+        out.append("Protein-forward — supports lean mass and recovery through perimenopause.")
+    elif any("diabetes" in c for c in conditions) and meal.get("glycemicLoad") == "low":
         out.append("Low-glycemic -- supports steady blood sugar through the afternoon.")
     elif any("pcos" in c for c in conditions):
         out.append("Protein-forward pairing -- aligned with PCOS insulin sensitivity.")

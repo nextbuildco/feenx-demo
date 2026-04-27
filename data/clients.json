@@ -1,36 +1,38 @@
 {
-  "sam-k": {
-    "id": "sam-k",
-    "firstName": "Sam",
-    "lastName": "K.",
-    "age": 34,
+  "madison-r": {
+    "id": "madison-r",
+    "firstName": "Madison",
+    "lastName": "R.",
+    "age": 47,
     "sexAtBirth": "Female",
-    "heightCm": 168,
-    "currentWeightKg": 72.5,
-    "targetWeightKg": 66,
-    "goal": "Fat loss",
+    "heightCm": 170,
+    "currentWeightKg": 71,
+    "targetWeightKg": 69,
+    "goal": "Performance",
+    "lifeStage": "Perimenopause",
     "chronicConditions": [],
-    "allergies": ["Shellfish"],
-    "aversions": ["Cilantro", "Blue cheese"],
+    "allergies": [],
+    "aversions": ["Cilantro", "Liver"],
     "cookingMinutesWeeknight": 30,
-    "equipment": ["Oven", "Stovetop", "Air fryer", "Blender"],
-    "sports": ["Lifting", "Running", "Yoga"],
+    "equipment": ["Oven", "Stovetop", "Air fryer", "Blender", "Instant Pot"],
+    "sports": ["Lifting", "Running"],
     "trainingWeek": [
       {"day": "Mon", "intensity": "Moderate"},
       {"day": "Tue", "intensity": "High"},
-      {"day": "Wed", "intensity": "Rest"},
+      {"day": "Wed", "intensity": "Low"},
       {"day": "Thu", "intensity": "Moderate"},
       {"day": "Fri", "intensity": "High"},
       {"day": "Sat", "intensity": "Low"},
       {"day": "Sun", "intensity": "Rest"}
     ],
     "targets": {
-      "kcal": 2100,
-      "proteinG": 160,
-      "carbsG": 210,
-      "fatG": 70,
-      "hydrationGlasses": 8
-    }
+      "kcal": 2200,
+      "proteinG": 140,
+      "carbsG": 220,
+      "fatG": 80,
+      "hydrationGlasses": 10
+    },
+    "notes": "Perimenopause. Sleep + recovery sensitive. Higher protein (1.6-2.2g/kg) supports lean mass preservation. Iron, calcium, magnesium emphasis. Limit alcohol + high-glycemic late-day carbs that disrupt sleep."
   },
   "diego-l": {
     "id": "diego-l",
@@ -64,40 +66,40 @@
       "fatG": 85,
       "hydrationGlasses": 10
     },
-    "notes": "T2 Diabetes under control. Favors low-glycemic meals, paired carbs with protein + fat to manage blood sugar."
+    "notes": "T2 Diabetes under control. Favors low-glycemic meals, paired carbs with protein + fat to manage blood sugar. Metformin morning + evening."
   },
-  "alyssa-p": {
-    "id": "alyssa-p",
-    "firstName": "Alyssa",
-    "lastName": "P.",
-    "age": 29,
+  "rachel-t": {
+    "id": "rachel-t",
+    "firstName": "Rachel",
+    "lastName": "T.",
+    "age": 44,
     "sexAtBirth": "Female",
-    "heightCm": 164,
-    "currentWeightKg": 68,
-    "targetWeightKg": 62,
+    "heightCm": 165,
+    "currentWeightKg": 88,
+    "targetWeightKg": 76,
     "goal": "Fat loss",
-    "chronicConditions": ["PCOS"],
-    "allergies": ["Tree nuts"],
-    "aversions": ["Mushrooms", "Beets"],
-    "cookingMinutesWeeknight": 25,
-    "equipment": ["Stovetop", "Air fryer", "Instant Pot"],
-    "sports": ["Running", "Yoga"],
+    "chronicConditions": ["GLP-1 medication (Wegovy)"],
+    "allergies": [],
+    "aversions": ["Mushrooms"],
+    "cookingMinutesWeeknight": 20,
+    "equipment": ["Stovetop", "Air fryer", "Microwave"],
+    "sports": ["Walking", "Yoga"],
     "trainingWeek": [
-      {"day": "Mon", "intensity": "Moderate"},
-      {"day": "Tue", "intensity": "Low"},
-      {"day": "Wed", "intensity": "Moderate"},
+      {"day": "Mon", "intensity": "Low"},
+      {"day": "Tue", "intensity": "Rest"},
+      {"day": "Wed", "intensity": "Low"},
       {"day": "Thu", "intensity": "Rest"},
-      {"day": "Fri", "intensity": "High"},
-      {"day": "Sat", "intensity": "Low"},
+      {"day": "Fri", "intensity": "Low"},
+      {"day": "Sat", "intensity": "Rest"},
       {"day": "Sun", "intensity": "Rest"}
     ],
     "targets": {
-      "kcal": 1850,
-      "proteinG": 150,
-      "carbsG": 155,
-      "fatG": 70,
-      "hydrationGlasses": 8
+      "kcal": 1500,
+      "proteinG": 120,
+      "carbsG": 130,
+      "fatG": 55,
+      "hydrationGlasses": 10
     },
-    "notes": "PCOS. Lower-carb on rest days supports insulin sensitivity. Favors protein + healthy fat first in the day."
+    "notes": "On Wegovy (GLP-1). Reduced appetite — smaller more frequent meals. Nausea mitigation: avoid high-fat, fried, spicy meals. Protein floor critical to prevent lean mass loss during weight loss phase. Nutrient-dense (low volume, high quality) prioritized over filling volume."
   }
 }

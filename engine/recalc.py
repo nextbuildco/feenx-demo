@@ -27,8 +27,10 @@ INTENSITY_WEIGHT: dict[str, float] = {
     "High": 0.5,
 }
 
-# Safety floors -- the solver must never push a day below these.
-MIN_KCAL_PER_DAY = 1500
+# Absolute safety floors -- the solver must never push a day below these.
+# These are the lower bound; the per-call `min_kcal_floor` is computed relative
+# to the client's plan (default: 80% of avg day target, clamped to >= 1200).
+ABSOLUTE_MIN_KCAL_PER_DAY = 1200
 MIN_PROTEIN_PER_DAY = 120  # g
 
 
@@ -97,6 +99,7 @@ def recalc_rest_of_week(
     logged_meal: dict,
     replaced_meal: dict,
     strategy: Strategy = "even",
+    min_kcal_floor: int | None = None,
 ) -> RecalcResult:
     """
     Core recalc function.
@@ -106,9 +109,16 @@ def recalc_rest_of_week(
     `logged_meal`   what the client actually ate (from swap_options.json or custom)
     `replaced_meal` the planned meal that got replaced (from the day's meals array)
     `strategy`      "even" or "smart"
+    `min_kcal_floor` per-client minimum kcal/day. If None, defaults to 80% of the
+                     average daily target across the plan (client-relative floor).
     """
     today = plan_days[today_index]
     today_target = compute_day_total(today["meals"])
+
+    # Client-relative floor: 80% of average day target unless caller overrides.
+    if min_kcal_floor is None:
+        avg_target = sum(compute_day_total(d["meals"]).kcal for d in plan_days) / max(len(plan_days), 1)
+        min_kcal_floor = max(1200, int(avg_target * 0.80))
 
     # Compute delta: actual - planned for the meal that was swapped.
     delta = Macros(
@@ -165,9 +175,9 @@ def recalc_rest_of_week(
 
         # Enforce safety floors. If trimming would push below MIN_KCAL,
         # clamp and push the unclaimed portion to the next days.
-        if new_kcal < MIN_KCAL_PER_DAY:
-            unclaimed = MIN_KCAL_PER_DAY - new_kcal  # positive -- amount we couldn't cut
-            new_kcal = MIN_KCAL_PER_DAY
+        if new_kcal < min_kcal_floor:
+            unclaimed = min_kcal_floor - new_kcal  # positive -- amount we couldn't cut
+            new_kcal = min_kcal_floor
             # Defer the unclaimed portion to the remaining days.
             # (Simple heuristic -- split evenly across later days.)
             later = len(remaining) - i - 1

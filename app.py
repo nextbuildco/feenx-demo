@@ -200,9 +200,9 @@ with st.sidebar:
     st.divider()
 
     client_labels = {
-        "sam-k":    "Sam K. • Fat loss",
-        "diego-l":  "Diego L. • T2 Diabetes",
-        "alyssa-p": "Alyssa P. • PCOS",
+        "madison-r": "Madison R. • Performance / Perimenopause",
+        "diego-l":   "Diego L. • Type 2 Diabetes",
+        "rachel-t":  "Rachel T. • GLP-1 (Wegovy)",
     }
     chosen_id = st.radio(
         "Client",
